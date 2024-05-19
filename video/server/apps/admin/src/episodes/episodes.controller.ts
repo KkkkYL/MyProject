@@ -24,13 +24,14 @@ export class EpisodesController {
       label:v.name,
       value:v._id
     }))
+    // 后台管理系统生成表单列名的数据来源
     return {
-      title:'课时管理',
+      title:'视频管理',
       column:[
-        {prop:'course',label:'所属课程',type:'select',row:true,dicData:courses},
-        {prop:'name',label:'课时名称',span:24,},
+        {prop:'course',label:'所属分类',type:'select',row:true,dicData:courses},
+        {prop:'name',label:'视频名称',span:24,},
         {prop:'file',label:'视频文件',span:24,type:'upload',action:'upload',listType: 'picture-img',width:120},
-    ]
+      ]
     }
   }
 }

@@ -22,7 +22,7 @@ const models = TypegooseModule.forFeature([
       //useFactory是用于帮~~~Async结尾的这些异步方法处理promise的
       useFactory(){
         return {
-          uri:process.env.DB,
+          uri:"mongodb://localhost/topfullstack",
           // useNewUrlParser:true,
           // useUnifiedTopology:true,
           // userCreateIndex:true,

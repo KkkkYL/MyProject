@@ -1,6 +1,6 @@
 <template lang="">
   <div>
-    <h3>课程列表</h3>
+    <h3>课程111列表</h3>
     <div>
       <el-button type="primary" size="default" @click="$router.push('/courses/create')">创建课程</el-button>
     </div>
@@ -31,8 +31,8 @@ export default class CourseList extends Vue {
   data = {}
   fields = {
     _id:{label:'ID'},
-    name:{label:'课程名称'},
-    cover:{label:'课程封面图'}
+    name:{label:'111分类名称'},
+    cover:{label:'xxx分类封面图'}
   }
 
   async fetch(){

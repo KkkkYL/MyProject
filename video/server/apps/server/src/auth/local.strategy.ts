@@ -13,6 +13,7 @@ export class LocalStrategy extends PassportStrategy(Strategy,'local'){
       passwordField:'password'
     } as IStrategyOptions)
   }
+  // 将请求体携带的用户username和password，到数据库中的User集合进行查询，若存在则请求成功
   async validate(username:string,password:string){
     const user = await this.userModel.findOne({username}).select('+password');
     if(!user){

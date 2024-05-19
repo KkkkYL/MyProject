@@ -1,8 +1,8 @@
 <!-- eslint-disable vue/multi-word-component-names -->
 <template>
   <div>
-    <h2>热门课程</h2>
-    <h3>{{ courses }}</h3>
+    <h2 class="classify">热门视频分类</h2>
+    <!-- <h3>{{ courses }}</h3> -->
     <v-row no-gutters style="height: 150px;">
       <v-col v-for="item in courses" :key="item._id" md="3">
         <v-card  class="mx-auto"  max-width="344">
@@ -47,6 +47,14 @@ export default {
   }),
 }
 </script>
-<style lang="">
-  
+<style>
+.classify {
+  margin-top:20px;
+  margin-left:60px;
+  margin-bottom:20px;
+}
+
+.mx-auto {
+  margin-bottom:20px;
+}
 </style>

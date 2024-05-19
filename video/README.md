@@ -6,7 +6,7 @@
 
 ### 项目启动
 1. 进入/admin，**npm run serve**启动后台管理系统
-2. 进入/server，**npm run start admin**启动后台服务API；**npm run start web**启动前端服务API
+2. 进入/server，**npm i、npm i fork-ts-checker-webpack-plugin、npm i webpack**,***npm run start admin**启动后台服务API；**npm run start web**启动前端服务API
 3. 进入/web,**npm run dev**启动web端页面
 
 ### 用户注册与登录

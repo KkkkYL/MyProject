@@ -11,13 +11,16 @@ import { CommonModule } from 'libs/common/src';
 const MAO = require('multer-aliyun-oss');
 
 @Module({
+  // 将要被用到的模块导入到消费模块当中
   imports: [
     CommonModule,
+    // OSS对象存储配置
     MulterModule.registerAsync({
       useFactory() {
         return {
           storage: MAO({
             config: {
+              // OSS对象存储需用到私人的region、accessKeyId、accessKeySecret、bucket
               region: process.env.OSS_REGION,
               accessKeyId: process.env.OSS_ACCESS_KEY_ID,
               accessKeySecret: process.env.OSS_ACCESS_KEY_SECRET,
@@ -27,7 +30,6 @@ const MAO = require('multer-aliyun-oss');
         };
       },
     }),
-
     DbModule,
     UsersModule,
     CoursesModule,

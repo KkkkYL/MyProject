@@ -3,6 +3,7 @@ import { ApiProperty } from '@nestjs/swagger';
 import { modelOptions, prop, Ref } from '@typegoose/typegoose';
 import { Episode } from './episode.model';
 
+// 打上时间戳，转JSON
 @modelOptions({
   schemaOptions: {
     timestamps: true,
@@ -10,7 +11,7 @@ import { Episode } from './episode.model';
   },
 })
 export class Course {
-  @ApiProperty({ description: '课程名称' })
+  @ApiProperty({ description: '分类名称' })
   @prop()
   name: string;
 
@@ -20,6 +21,8 @@ export class Course {
 
   // @prop({type: ()=>[Episode]})
   // episodes:Episode[];
+
+  //分类与视频进行关联，用于关联查询时将视频一同带出
   @prop({
     ref:'Episode',
     type:()=>[Episode],

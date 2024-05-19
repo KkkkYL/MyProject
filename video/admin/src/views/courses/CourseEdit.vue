@@ -2,11 +2,11 @@
   <div>
     <h3>{{isNew?'创建':'编辑'}}课程</h3>
     <el-form label-width="100px">
-      <el-form-item label="课程名称">
-        <el-input placeholder="请输入课程名称"  v-model="data.name"></el-input>
+      <el-form-item label="分类名称">
+        <el-input placeholder="请输入分类名称"  v-model="data.name"></el-input>
       </el-form-item>
-      <el-form-item label="课程封面图">
-        <el-input placeholder="请输入课程封面图"  v-model="data.cover"></el-input>
+      <el-form-item label="分类封面图">
+        <el-input placeholder="请输入分类封面图"  v-model="data.cover"></el-input>
       </el-form-item>
       <el-form-item>
         <el-button type="primary" @click="onSubmit(data)">提交</el-button>
@@ -23,8 +23,8 @@ export default class CourseEdit extends Vue {
   @Prop(String) id!:string
   data = {}
   fields = {
-    name:{label:'课程名称',type:'input'},
-    cover:{label:'课程封面图',type:'input'}
+    name:{label:'分类名称',type:'input'},
+    cover:{label:'分类封面图',type:'input'}
   }
 
   get isNew(){

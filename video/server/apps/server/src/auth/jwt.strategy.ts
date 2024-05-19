@@ -8,6 +8,7 @@ import { BadRequestException } from '@nestjs/common'
 
 export class JwtStrategy extends PassportStrategy(Strategy,'jwt'){
   constructor(@InjectModel(User) private userModel:ReturnModelType<typeof User>){
+    // jwt的Secret存放在.env文件中，将会对请求头中的jwt进行验证
     super({
       secretOrKey:process.env.SECRET,
       jwtFromRequest:ExtractJwt.fromAuthHeaderAsBearerToken()
